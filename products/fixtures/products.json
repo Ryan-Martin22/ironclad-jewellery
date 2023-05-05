@@ -1,4 +1,4 @@
-{
+[{
     "model": "products.product",
     "pk": 1,
     "fields": {
@@ -153,4 +153,4 @@
       "image_url": null,
       "image": "metal-bracelet3.jpg"
     }
-  },
+  }]

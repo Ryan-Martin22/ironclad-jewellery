@@ -1,4 +1,4 @@
-{
+[{
     "model": "products.category",
     "pk": 1,
     "fields": {
@@ -61,4 +61,4 @@
       "name": "clearance",
       "friendly_name": "Clearance"
     }
-  },
+  }]
