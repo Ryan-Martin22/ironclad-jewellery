@@ -1,0 +1,64 @@
+{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "new_arrivals",
+      "friendly_name": "New Arrivals"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "metal",
+      "friendly_name": "Metal"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "leather",
+      "friendly_name": "Leather"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+      "name": "gold",
+      "friendly_name": "Gold"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+      "name": "silver",
+      "friendly_name": "Silver"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 6,
+    "fields": {
+      "name": "steel",
+      "friendly_name": "Steel"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 7,
+    "fields": {
+      "name": "deals",
+      "friendly_name": "Deals"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 8,
+    "fields": {
+      "name": "clearance",
+      "friendly_name": "Clearance"
+    }
+  },
