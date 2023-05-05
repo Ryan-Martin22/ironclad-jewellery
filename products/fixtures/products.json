@@ -1,0 +1,156 @@
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "category": 4,
+      "sku": "Gold1",
+      "name": "Gold Cuban Ring",
+      "description": "This cuban ring is forged with high quality plated gold and looks amazing on any guys hand.",
+      "price": "100.00",
+      "image_url": null,
+      "image": "gold-ring1.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "category": 4,
+      "sku": "Gold2",
+      "name": "Gold Rectactangle Ring",
+      "description": "This elegant rectangle shaped rings is made for durable plated gold and is perfect for every occasion.",
+      "price": "80.00",
+      "image_url": null,
+      "image": "gold-ring3.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "category": 5,
+      "sku": "Silver1",
+      "name": "Silver X Ring",
+      "description": "This silver ring is branded with a Stylish X carved into solid silver.",
+      "price": "80.00",
+      "image_url": null,
+      "image": "silver-ring1.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "category": 7,
+      "sku": "Silver2",
+      "name": "Silver Gothic Ring",
+      "description": "This heavy duty, three sided gothic style ring is made from premium zirconia silver and takes your style to a new level.",
+      "price": "20.00",
+      "image_url": null,
+      "image": "gabrielle-henderson-O7l3PmbGxF0-unsplash-min.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "category": 5,
+      "sku": "Silver3",
+      "name": "Silver Norse Ring",
+      "description": "This elegant norse style ring is designed with an interwoven silver pattern reminiscent of the vikings of old",
+      "price": "95.00",
+      "image_url": null,
+      "image": "silver-ring3.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "category": 6,
+      "sku": "Steel1",
+      "name": "Steel Skull Ring",
+      "description": "This Rock and Roll stainless steel ring is enveloped in skulls, inspired by rock legends of the past.",
+      "price": "50.00",
+      "image_url": null,
+      "image": "steel-ring1.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "category": 6,
+      "sku": "Steel2",
+      "name": "Back Quartz Ring",
+      "description": "Turn heads with this stunning black quartz ring, durable and elegant.",
+      "price": "70.00",
+      "image_url": null,
+      "image": "steel-ring2.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "category": 3,
+      "sku": "Leather1",
+      "name": "Black Leather Bracelet",
+      "description": "This stylish black leather bracelet is held together by a stainless steel clasp.",
+      "price": "40.00",
+      "image_url": null,
+      "image": "leather-bracelet1.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "category": 7,
+      "sku": "Leather2",
+      "name": "Leather Nmae Bracelet",
+      "description": "This black leather bracelet is style with three personalisable steel charms to add a bit of individuality to the wrist.",
+      "price": "60.00",
+      "image_url": null,
+      "image": "pexels-lisa-fotios-7016917-min.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "category": 2,
+      "sku": "Metal1",
+      "name": "Metal Feather Bangle",
+      "description": "This metal bangle has a stunning feather pattern all around, can easily fit on any size wrist.",
+      "price": "40.00",
+      "image_url": null,
+      "image": "metal-bracelet1.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "category": 2,
+      "sku": "Metal2",
+      "name": "Metal Chain Bracelet",
+      "description": "This stylish but sleek metal chain bracelet is made from stainless steel and can be paired with another showstopper.",
+      "price": "30.00",
+      "image_url": null,
+      "image": "metal-bracelet2.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "category": 2,
+      "sku": "Metal3",
+      "name": "Gold Metal Bracelet",
+      "description": "This stunning gold plated metal bangle is elegant and sophisticated, ideal for those looking to make a lasting impression.",
+      "price": "70.00",
+      "image_url": null,
+      "image": "metal-bracelet3.jpg"
+    }
+  },
