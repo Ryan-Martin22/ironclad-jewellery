@@ -17,7 +17,7 @@ class Category(models.Model):
         return self.friendly_name
 
 
-class Products(models.Model):
+class Product(models.Model):
     """Products model"""
     class Meta:
         """Removes extra 's' from Model name"""
