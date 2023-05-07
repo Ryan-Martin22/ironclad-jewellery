@@ -8,7 +8,6 @@ class ProductAdmin(admin.ModelAdmin):
         'name',
         'category',
         'price',
-        'rating',
         'image',
     )
 
@@ -22,5 +21,5 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 # Register your models here.
-admin.site.register(Product)
-admin.site.register(Category)
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Category, CategoryAdmin)
