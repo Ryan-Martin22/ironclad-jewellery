@@ -6,32 +6,31 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
                 <a href="" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="rings-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Rings
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Gold</a>
-                <a href="" class="dropdown-item">Silver</a>
-                <a href="" class="dropdown-item">Steel</a>
-                <a href="" class="dropdown-item">All Rings</a>
+            <div class="dropdown-menu border-0" aria-labelledby="rings-link">
+                <a href="{% url 'products' %}?category=gold" class="dropdown-item">Gold</a>
+                <a href="{% url 'products' %}?category=silver" class="dropdown-item">Silver</a>
+                <a href="{% url 'products' %}?category=steel" class="dropdown-item">Steel</a>
+                <a href="{% url 'products' %}?category=gold,silver,steel" class="dropdown-item">All Rings</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="bracelets-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Bracelets
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Metal</a>
-                <a href="" class="dropdown-item">Leather</a>
-                <a href="" class="dropdown-item">All Bracelets</a>
+            <div class="dropdown-menu border-0" aria-labelledby="bracelets-link">
+                <a href="{% url 'products' %}?category=metal" class="dropdown-item">Metal</a>
+                <a href="{% url 'products' %}?category=leather" class="dropdown-item">Leather</a>
+                <a href="{% url 'products' %}?category=metal,leather" class="dropdown-item">All Bracelets</a>
             </div>
         </li>
 
@@ -40,10 +39,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
