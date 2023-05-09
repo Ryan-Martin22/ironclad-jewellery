@@ -12,6 +12,10 @@ def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
 
     quantity = int(request.POST.get('quantity'))
+    if quantity > 99:
+        quantity = 99
+    elif quantity < 1:
+        quantity = 1
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
