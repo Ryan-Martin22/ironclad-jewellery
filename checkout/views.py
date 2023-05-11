@@ -33,7 +33,7 @@ def checkout(request):
             order = order_form.save()
             for item_id, item_data in bag.items():
                 try:
-                    product = Products.objects.get(id=item_id)
+                    product = Product.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
