@@ -61,12 +61,21 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(
+        product_id=product.id, status=True).order_by('-created_on')
+    total_reviews = reviews.count()
+    
+    template = 'products/product_detail.html'
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'total_reviews': total_reviews,
     }
 
-    return render(request, 'products/product_detail.html', context)
+    return render(request, template, context)
+
+
 
 @login_required
 def add_product(request):
