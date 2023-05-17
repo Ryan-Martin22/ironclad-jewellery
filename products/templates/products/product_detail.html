@@ -156,6 +156,16 @@
                             {{review.review}}
                         </p>
                     </div>
+                    {% if request.user == review.user or request.user.is_superuser %}
+                    <div class="col text-right del-product">
+                        <a class="text-info" href="{% url 'edit_review' review.id %}">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a class="text-danger" href="{% url 'delete_review' review.id %}">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </div>
+                    {% endif %}
                 {% empty %}
                     <div class="font-italic mt-2">
                         There are currently no reviews to display for this product.

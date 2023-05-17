@@ -100,3 +100,8 @@ ul.thumb li img {
     background-color: #D9D4D2;
     color: #000000;
 }
+
+.edit-review {
+    width: 80%;
+    margin: 0 auto;
+}

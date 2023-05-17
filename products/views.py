@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Review
@@ -173,3 +174,49 @@ def submit_review(request, product_id):
     template = 'products/product_detail.html'
 
     return render(request, template)
+
+def edit_review(request, review_id):
+    """Edit a review"""
+
+    review = get_object_or_404(Review, pk=review_id)
+    product = review.product
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, request.FILES, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, 'Review successfully updated!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request, 'Failed to update this review. \
+                    Please ensure the form is valid.')
+    else:
+        form = ReviewForm(instance=review)
+        messages.info(request, 'You are editing your review')
+
+    template = 'products/edit_review.html'
+
+    context = {
+        'form': form,
+        'review': review,
+        'product': product,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """ Delete review from the product details page """
+
+    review = get_object_or_404(Review, pk=review_id)
+    product = review.product
+
+    if request.method == 'POST':
+        review.delete()
+        messages.success(request, 'Your review has been deleted!')
+        return redirect(reverse_lazy('product_detail', args=[product.id]))
+
+    return render(request, 'products/delete_review.html')
