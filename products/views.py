@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 
 
 def all_products(request):
@@ -137,3 +137,30 @@ def delete_product(request, product_id):
         return redirect(reverse('products'))
 
     return render(request, 'products/confirm_delete.html')
+
+
+def submit_review(request, product_id):
+    """Sumbit a product review"""
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            data = Review()
+            data.rating = form.cleaned_data['rating']
+            data.review = form.cleaned_data['review']
+            data.product = product
+            data.user_id = request.user.id
+            data.save()
+            messages.success(
+                request, 'Thank you! Your review has been submitted.')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request, "Sorry your review could not be submitted.")
+            return redirect(reverse('product_detail', args=[product.id]))
+    else:
+        form = ReviewForm()
+
+    template = 'products/product_detail.html'
+
+    return render(request, template)

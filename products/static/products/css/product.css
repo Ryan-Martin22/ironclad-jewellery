@@ -15,3 +15,88 @@
 .btn-cancel {
     margin: 5px;
 }
+
+/* Star Rating CSS from Rathan Kumar's YouTube Tutorial
+Link in README */
+/* Hide Radio button */
+.rate > input {
+    display: none;
+}
+
+.rate {
+    display: inline-block;
+    border: 0;
+    color: #aaa;
+}
+
+.rate > label {
+    float: right;
+}
+
+/* Showing the stars */
+.rate > label:before {
+    display: inline-block;
+    font-size: 20px;
+    font-family: FontAwesome;
+    content: "\f005";
+    margin: 0;
+    padding: 0.3rem .2rem;
+    cursor: pointer;
+}
+
+/* Half star */
+.rate .half:before {
+    content: "\f089";
+    position: absolute;
+    padding-right: 0;
+}
+
+/* Click and hover */
+input:checked~label,
+label:hover~label {
+    color: #5ba0d9;
+}
+
+/* hover highlight */
+input:checked+label:hover,
+input:checked~label:hover,
+input:checked~label:hover~label,
+label:hover~input:checked~label {
+    color: #f21b08;
+}
+
+.rating-star i {
+    color: #627fbd !important;
+}
+
+ul.thumb {
+    margin: 0 auto;
+    padding: 0;
+    float: left;
+}
+
+ul.thumb li {
+    list-style: none;
+    margin: 10px;
+}
+
+ul.thumb li img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid grey;
+}
+
+.review-box {
+    width: 83%;
+}
+
+.submit-review {
+    background-color: #414243;
+    color: #D9D4D2;
+    margin-top: 20px;
+}
+
+.submit-review:hover {
+    background-color: #D9D4D2;
+    color: #000000;
+}
