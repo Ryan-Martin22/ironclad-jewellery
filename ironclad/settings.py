@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'stripe',
     'profiles',
     'favourites',
+    'contact',
 ]
 
 MIDDLEWARE = [
