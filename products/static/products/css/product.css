@@ -1,0 +1,17 @@
+#delete {
+    margin: 50px;
+}
+
+#delete-confirm {
+    background-color: #beb5b1a6;
+    margin: 0 auto;
+    padding: 40px;
+    width: 50%;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.btn-del,
+.btn-cancel {
+    margin: 5px;
+}
