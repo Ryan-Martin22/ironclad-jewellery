@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.http import Http404
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.db.models import Q
 from django.db.models.functions import Lower
+from favourites.models import Favourites
 from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
 
@@ -66,9 +68,17 @@ def product_detail(request, product_id):
         product_id=product.id, status=True).order_by('-created_on')
     total_reviews = reviews.count()
     
+    try:
+        favourites = get_object_or_404(Favourites, username=request.user.id)
+    except Http404:
+        is_in_favourites = False
+    else:
+        is_in_favourites = bool(product in favourites.products.all())
+    
     template = 'products/product_detail.html'
 
     context = {
+        'is_in_favourites': is_in_favourites,
         'product': product,
         'reviews': reviews,
         'total_reviews': total_reviews,

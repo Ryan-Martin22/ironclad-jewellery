@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.http import Http404
-from products.models import Products
+from products.models import Product
 from .models import Favourites
 
 
@@ -39,7 +39,7 @@ def favourites_view(request):
 def add_favourites(request, item_id):
     """View to add a product to favourites"""
 
-    product = get_object_or_404(Products, pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
     try:
         favourites = get_object_or_404(Favourites, username=request.user.id)
     except Http404:
@@ -55,7 +55,7 @@ def add_favourites(request, item_id):
         messages.success(request, f'{product.name} successfully added \
             to your favourites!')
 
-    return redirect(reverse('product_details', args=[product.id]))
+    return redirect(reverse('product_detail', args=[product.id]))
 
 
 @login_required
@@ -63,7 +63,7 @@ def remove_favourites(request, item_id, redirect_from):
     """
     A view that will add a product item to favourites
     """
-    product = get_object_or_404(Products, pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
     favourites = get_object_or_404(Favourites, username=request.user.id)
     if product in favourites.products.all():
         favourites.products.remove(product)
