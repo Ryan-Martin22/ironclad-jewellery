@@ -1,1 +1,1 @@
-web: gunicorn ironclad-jewellery.wsgi:application
+web: gunicorn ironclad.wsgi:application
