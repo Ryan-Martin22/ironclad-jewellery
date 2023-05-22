@@ -331,5 +331,33 @@ Visable on the bottom of the Product Details Page
 <img src="assets/readme_images/contact.png" width="50%">
 
 
+### Edit Products
+<img src="assets/readme_images/edit-product.png" width="50%">
+
+### Delete Products
+<img src="assets/readme_images/delete-product.png" width="50%">
+
+## Colour Scheme 
+
+The colour scheme for the project was put together using [Adobe Color](https://color.adobe.com/create/image) by uploading the landing page image.
+
+The colour scheme is also based of the Boutique Ado walkthrough.
+
+
+## Font Choice
+
+I chose the Google Font Castoro Titling to act as the primary font for the website, including for the logo.
+
+
+# Features to be Implemented
+The following features can be implemented to enhance the project:
+
+- This weeks featured items for promotion on the homepage
+- Implementation of a monthly discount coupon for subscribed shoppers.
+- Returns Functionality
+
+
+
+
 
 
