@@ -529,7 +529,7 @@ The Order total was also compared on the checkout page, the successful checkout 
     - Address
     - Order Total
     - Delivery Cost
-    - Grande Total
+    - Grand Total
 
 - The above details contained within the order confirmation matched the items initially added to the shopping bag, the checkout form page Order Summary, and the order in the database.
 
@@ -537,3 +537,30 @@ The Order total was also compared on the checkout page, the successful checkout 
 
 - Email confirmation was tested by placing an order to an email address that can be checked. An email confirmation matching the template set up in the checkout app was received with the correct order details within and a contact email for if there was an issue with the order.
 
+### 9. As a shopper, I want to be able to be able to order without creating an account so that I can make one-off orders.
+
+An order was placed without being logged into an account. It was tested by comparing the the order confirmation, email confirmation, and the order within the order model to ensure it matched what was placed in the bag and then checked out. Also, the order event on Strip matched the total cost of the order. 
+
+### 10. As a shopper, I want to be able to be able to sort a specific category of a product so that I can find the best price quickly for the product I am looking for.
+
+- The navigation contains the multiple categories on offer. It was tested by clicking through and ensuring the category tag on each product card matched the category the page was displaying. 
+
+- within the following Nav headings, their particular categories are listed when clicked, allowing for further filtering per section:
+    - All Products
+        - By Price
+        - By Category
+        - All Products
+    - Rings
+        - Gold
+        - Silver
+        - Steel
+        - All Rings
+    - Bracelets
+        - Metal
+        - Leather
+        - All Bracelets
+    - Special Offers
+        - New Arrivals
+        - Deals
+        - Clearance 
+        - All Specials
