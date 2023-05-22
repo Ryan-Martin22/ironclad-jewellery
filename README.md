@@ -381,9 +381,26 @@ The following features can be implemented to enhance the project:
 
 [Font Awesome](https://fontawesome.com/) - Used for all of the icons throughout the site.
 
-[Canva](https://www.canva.com/) - Used to create the favicon for the project.
 
 [Image Compressor](https://imagecompressor.com/) - Used to compress the website and product images.
+
+# Testing
+## **Manual Testing by User Story**
+### **Superuser / Admin**
+### 1. As a Site Owner, I want to be able to add a product so that I can add more items to my store.
+- Products can be added both via the project management page found by clicking on 'My Account' or vis the Admin Panel. Both types of product adding were tested and the products were both visable in the model and on the Products Page.
+
+The following was also checked and found to be working as expected when the product was added:
+
+- The required fields are validating correctly and error messages are explicit and related to each required field.
+- All required fields are indicated with an asterisk.
+- Number fields can only contain numbers.
+- Images can be left out and a placeholder image takes its place.
+- Images, when uploaded, are stored in the appropriate Amazon Web Services Bucket and Folder.
+- Buttons are highlighted on hover and take the user to the correct page:
+    - Cancel takes the user back to the Products Page
+    - Add product add the product and returns the user to the Products Page
+- An alert message appears in the top right of the page to notify the user that the product has successfully been added.
 
 
 
