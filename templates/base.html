@@ -164,10 +164,10 @@
     <br>
     <br>
     <!-- footer -->
-    <footer>
-        <div class=" container text-center footer bg-white">
-            <div class="row">
-                <div class="col-md-4 text-center footer-header">
+    <div class="text-center footer bg-white">
+        <footer>
+            <div class="text-center footer bg-white">
+                <div class="text-center footer-header">
                     <!-- Subscribe Section -->
                     <h6 class="text-uppercase">Subscribe</h6>
                     <p>Subscribe to the Ironclad mailing list to get exclusive offers straight to
@@ -205,39 +205,39 @@
                                     </div>
                                 </div>
                             </div>
+                        </form>
                     </div>
-                    </form>
+                    <!--End mc_embed_signup-->
                 </div>
-                <!--End mc_embed_signup-->
+                <div>
+                    <a class="about m-2" href="{% url 'about_us' %}">About us</a>
+                    <a class="privacy-policy" rel="noopener nofollow"
+                        href="https://www.privacypolicygenerator.org/live.php?token=0Q3d523lPtgEeszyuxfeZzcNdP2VAB4X"
+                        target="_blank" role="button">Privacy Policy
+                    </a>
+                </div>
+                <!-- socials -->
+                <div class="social-networks">
+                    <a class="m-2" rel="noopener" href="" role="button" target="_blank" aria-label="link to facebook"><i
+                            class="fab fa-facebook"></i>
+                    </a>
+                    <a class="m-2 footer-button" rel="noopener" href="https://www.instagram.com/" role="button"
+                        target="_blank" aria-label="link to instagram"><i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <!-- Copyright -->
+                <div>
+                    <p class="copyright">Copyright
+                        <span>&copy;</span>
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        |All rights reserved |For educational purposes only
+                    </p>
+                </div>
             </div>
-            <div>
-                <a class="about m-2" href="{% url 'about_us' %}">About us</a>
-                <a class="privacy-policy" rel="noopener nofollow"
-                    href="https://www.privacypolicygenerator.org/live.php?token=0Q3d523lPtgEeszyuxfeZzcNdP2VAB4X"
-                    target="_blank" role="button">Privacy Policy
-                </a>
-            </div>
-            <!-- socials -->
-            <div class="social-networks">
-                <a class="m-2" rel="noopener" href="" role="button" target="_blank" aria-label="link to facebook"><i
-                        class="fab fa-facebook"></i>
-                </a>
-                <a class="m-2 footer-button" rel="noopener" href="https://www.instagram.com/" role="button"
-                    target="_blank" aria-label="link to instagram"><i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            <!-- Copyright -->
-            <div>
-                <p class="copyright">Copyright
-                    <span>&copy;</span>
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-                    |All rights reserved |For educational purposes only
-                </p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     {% block postloadjs %}
     <script type="text/javascript">
