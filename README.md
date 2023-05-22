@@ -313,5 +313,23 @@ Visable on the bottom of the Product Details Page
 
 <img src="assets/readme_images/checkout-success.png" width="50%">
 
+## Footer
+
+<img src="assets/readme_images/footer.png" width="100%">
+
+## Company
+### About Us
+
+<img src="assets/readme_images/about.png" width="50%">
+
+### Privacy Policy
+
+<img src="assets/readme_images/privacy.png" width="50%">
+
+## Contact Form
+
+<img src="assets/readme_images/contact.png" width="50%">
+
+
 
 
