@@ -464,3 +464,18 @@ Within the Admin panel, the Superuser is able to remove a review from the site w
 
 I tested this by: 
 - Clicking a Product Card. I was taken to the correct item as the product image, title, and price matched the Product Card clicked on. The user can also see the description of the item they are viewing which matched the description in the model for that product. 
+
+### 3. As a shopper, I want to be able to add items to my basket so that I can keep track of what I am spending.
+
+The following scenarios were tested by checking the items added to the Shopping Bag:
+
+- I added an item to the bag and checked the correct product was added.
+
+- I increased the quantity before adding to the shopping bag and checked whether the quantity in the bag matched what was was added.
+
+- I tried to add 0 or a quantity over 99, an error message by the quantity field notifies the user that the quantity can only be between 1-99. If the user uses the buttons rather than typing the quantity, the buttons are disabled if attempting to decrement to 0 or increment above 99. I was unable to add a quantity that wasn't within the specified quantity allowance.
+
+- Once an item has been added to the shopping bag a success message appears in the top right corning, notifying the user of the specific product and quantity added, how much more to spend to save on delivery and a link to the shopping bag. The product in the toast matched the Product Details I was in and the item that was in the shopping bag.
+
+All items were added as they should be to the shopping bag and tested through to order completion to ensure the items added to the shopping bag matched the completed order.
+
