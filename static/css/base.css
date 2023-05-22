@@ -119,6 +119,10 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+#products-home {
+    color: #243c6a;
+}
+
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
