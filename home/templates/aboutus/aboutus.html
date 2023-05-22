@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}About us {% endblock %}
+
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid ">
+    <div class="row h-100">
+        <div class="col-12 text-center">
+            <hr class="w-50 mb-1">
+            <h1 class="mb-4">About us</h1>
+            <hr class="w-50 mb-1">
+            <p class="justify-content-center">
+<br>                
+Welcome to Ironclad Jewellery, where craftsmanship and style converge to create exceptional men's accessories that leave a lasting impression. 
+As a premier destination for discerning gentlemen, we offer a meticulously curated collection of exquisite jewellery pieces,
+designed to elevate your personal style and showcase your individuality.
+<br>
+At Ironclad Jewellery, we understand that men's fashion extends beyond clothing and encompasses the finer details that complete a sophisticated look. 
+Our dedication to providing exceptional quality is evident in every piece we offer. 
+Each item in our collection is meticulously crafted using premium materials and expert techniques, 
+resulting in jewellery that exudes timeless elegance and durability.
+<br>
+We take pride in our commitment to authenticity and originality. 
+Our team of skilled artisans combines traditional craftsmanship with contemporary design sensibilities, resulting in jewellery that effortlessly blends classic sophistication with modern aesthetics. 
+Whether you seek a bold statement piece or subtle accents to enhance your ensemble, our diverse range caters to all tastes and preferences.
+<br>
+At Ironclad Jewellery, we believe that jewellery should not only be an accessory but also a reflection of your unique personality. 
+Our collection features a wide array of designs, from sleek and minimalist to intricately detailed creations, 
+allowing you to find the perfect piece that resonates with your individual style.
+We understand that every gentleman is different, and our commitment to providing a diverse range ensures that you can find jewellery that speaks to your distinct taste.
+<br>
+We also understand the significance of the perfect gift, and our selection includes pieces that are perfect for commemorating special occasions or expressing heartfelt sentiments. 
+Whether it's a birthday, anniversary, or celebration of achievement, our jewellery serves as a meaningful token that will be treasured for a lifetime.
+<br>
+At Ironclad Jewellery, we are not just a store; we are a community of individuals passionate about style, craftsmanship, and self-expression.
+We strive to provide an exceptional shopping experience, offering personalized customer service and expert guidance to help you make the perfect choice. 
+We are committed to exceeding your expectations and ensuring your satisfaction with every purchase.
+<br>
+Thank you for choosing Ironclad Jewellery. Discover the perfect piece that captures your unique essence and elevates your style to new heights.
+
+                Sincerely, <br>
+                <span>Ironclad jewellery</span>.
+            </p>
+        </div>
+        <div class="col-12 text-center">
+            <h2>
+                <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase">Shop
+                    Now</a>
+            </h2>
+        </div>
+    </div>
+</div>
+{% endblock %}

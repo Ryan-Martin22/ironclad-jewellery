@@ -152,6 +152,51 @@
 
     {% block content %}
     {% endblock %}
+    <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+<!-- footer -->
+    <div class="text-center footer fixed-bottom bg-white">
+        <footer>
+            <div>
+                <h2>
+                    <a class="newsletter text-center" href="">
+                        <strong>Sign up for our newsletter</strong>
+                    </a>
+                </h2>
+            </div>
+            <div>
+                <a class="about m-2" href="{% url 'about_us' %}">About us</a>
+                <a class="privacy-policy" rel="noopener nofollow"
+                    href="https://www.privacypolicygenerator.info/live.php?token=570h84BK7hpgjt9tVMrFxzenvC8iqQmW"
+                    target="_blank" role="button">Privacy Policy
+                </a>
+            </div>
+            <!-- socials -->
+            <div class="social-networks">
+                <a class="m-2" rel="noopener"
+                    href="" role="button" target="_blank"
+                    aria-label="link to facebook"><i class="fab fa-facebook"></i>
+                </a>
+                <a class="m-2 footer-button" rel="noopener" href="https://www.instagram.com/" role="button"
+                    target="_blank" aria-label="link to instagram"><i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <!-- Copyright -->
+            <div>
+                <p class="copyright">Copyright
+                    <span>&copy;</span>
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    |All rights reserved |For educational purposes only
+                </p>
+            </div>
+        </footer>
+    </div>
 
     {% block postloadjs %}
     <script type="text/javascript">
