@@ -477,5 +477,17 @@ The following scenarios were tested by checking the items added to the Shopping 
 
 - Once an item has been added to the shopping bag a success message appears in the top right corning, notifying the user of the specific product and quantity added, how much more to spend to save on delivery and a link to the shopping bag. The product in the toast matched the Product Details I was in and the item that was in the shopping bag.
 
-All items were added as they should be to the shopping bag and tested through to order completion to ensure the items added to the shopping bag matched the completed order.
+All items were added as they should be to the shopping bag and tested through to order completion to ensure the items added to the shopping bag matched the completed order. 
+
+### 4. As a shopper, I want to be able to be able to adjust the quantity of products in my basket so that I can make changes to my purchases before checkout.
+
+The following scenarios were tested by completing the order and checking what was submitted in the Admin:
+
+- Increasing the quantity of an item in the shopping bag.
+
+- Decreasing the quantity of an item in the shopping bag.
+
+- Removing an item out of the shopping bag.
+
+All of the above actions are reflected correctly in the Order database along with the correct total delivery and grand total prices.
 
