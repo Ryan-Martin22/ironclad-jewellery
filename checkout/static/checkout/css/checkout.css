@@ -64,3 +64,10 @@ select option[value=""] {
     margin: 0;
     height: 100%;
 }
+
+@media (max-width: 380px) {
+    .checkout-order {
+      margin-right: 15px;
+      font-size: small;
+    }
+  }
