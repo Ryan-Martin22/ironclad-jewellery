@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import handler404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,3 +30,7 @@ urlpatterns = [
     path('favourites/', include('favourites.urls')),
     path('contact/', include('contact.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'ironclad.views.handler404'
+handler500 = 'ironclad.views.handler500'
+handler503 = 'ironclad.views.handler503'
