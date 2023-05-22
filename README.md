@@ -402,6 +402,24 @@ The following was also checked and found to be working as expected when the prod
     - Add product add the product and returns the user to the Products Page
 - An alert message appears in the top right of the page to notify the user that the product has successfully been added.
 
+### 2.	As a Site Owner, I want to be able to Edit/Update a product so that I can change the price, description, and other product criteria.
+
+The below was tested by editing an existing product:
+
+- Edit buttons are located on the product cards on the products page which are only accessible if you are a Superuser. 
+
+I also attempted to edit products whilst signed in as a generic user. The edit button on the Product Cards weren't available and I was unable to sign into the Admin Panel.
+
+- Clicking the Edit button takes the user to the product form which is already populated with the current information. I double checked this information matched the product I intended to edit, which it did. 
+- The fields are validated the same way as if a new product was being added, all number fields must be numbers and required fields filled in. Error messages appeared as I attempted to input incorrect information and the form would not submit.
+- Removing the image was tested and the placeholder image will replaced it upon saving as expected.
+- If the image is replaced with a new image it is stored in the correct Amazon Web Services Bucket and Folder.
+- The name of the image uploaded can be the same as an image that exists.
+- An alert message appears in the top right of the page to notify the user which product they are currently editing. This matched the product name that was populated within the edit form.
+- Buttons are highlighted on hover and take the user to the correct page:
+    - Cancel takes the user back to the Products Page.
+    - Update product saves the updated product information and returns the user to the Products Page. This is confirmed via the admin panel and the details on the Product Details page.
+
 
 
 
