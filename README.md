@@ -612,25 +612,17 @@ To test the order history, I checked whether the orders that were placed to test
 
 To test that accounts cannot be created with the same email address I attempted to create an account for an email that already exists. An error message occurred after I clicked submit, ensuring I was unable to create the duplicate account
 
-### 14. As a shopper, I want to be able to be able to recover my password so that I can recover my account access.
-
-This was tested by clicking the 'Forgot Password' link at the bottom of the login page. The user then receives a link via email, therefore I tested this with an existing email to ensure the link was received.
-
-There is a wait for the password reset link to be sent but when it comes through, the user is taken to a page where they reset the password by entering it twice. After the new password has been entered, the user is re-directed to a confirmation page with a bootstrap toast displaying a success message. If the passwords do not match then an error message notifies the user so they can try again.
-
-Once reset, the user must then re-login with the new password, which was tested to confirm the password change and that the correct user is now logged in.
-
-### 15. As a shopper, I want to be able to be able to receive a registration confirmation email so that I can confirm registration.
+### 14. As a shopper, I want to be able to be able to receive a registration confirmation email so that I can confirm registration.
 
 This was tested by registering for an account. To complete registration, the user must receive an email with a link that confirms their email address. This was tested with an outlook email address that was created for testing. The email was received and the account was confirmed via the link.
 
-### 16. As a shopper, I want to be able to be able to sign up for emails so that I can be notified of new releases, deals, and upcoming sales.
+### 15. As a shopper, I want to be able to be able to sign up for emails so that I can be notified of new releases, deals, and upcoming sales.
 
 Contained in the footer, the user can subscribe by entering their email and clicking submit. If there is an error with the email, an error message appears underneath the email box. If successful then there is a success message instead. 
 
 The subscription was tested by using a test email to subscribe and logging into Mailchimp and checking the contacts. Once confirmed the contact was there I scrolled across to see if they were subscribed. From here I also tested unsubscribing a user to ensure it is possible if a request came in. 
 
-### 17. As a shopper, I want to be able to be able to contact the site owner so that I can ask about my order or for further information.
+### 16. As a shopper, I want to be able to be able to contact the site owner so that I can ask about my order or for further information.
 
 The contact form link is placed within the footer and takes the user to the contact page. The form was tested by ensuring:
 
@@ -640,7 +632,7 @@ The contact form link is placed within the footer and takes the user to the cont
 - The message box could hold enough text for a message.
 - the form submitted the message to a working email for the site owner to respond.
 
-### 18. As a shopper, I want to be able to be able to review products purchased on the site so I can share my thoughts with other shoppers and the business.
+### 17. As a shopper, I want to be able to be able to review products purchased on the site so I can share my thoughts with other shoppers and the business.
 
 The review section was tested by:
 
@@ -660,7 +652,7 @@ Both the rating and the review sections are required fields so the form cannot b
 
 This was tested by adding a new product to the shop. I then added a review, followed by deleting the product. The review was deleted from the database along with the product. I checked this by signing into the admin panel and checking the list of reviews. The review added to the product what was deleted from the Review model as was the product from the Products model.
 
-### 19. As a shopper, I want to be able to be able to edit and remove my reviews of products purchased so I can share or remove my reviews if my opinions change.
+### 18. As a shopper, I want to be able to be able to edit and remove my reviews of products purchased so I can share or remove my reviews if my opinions change.
 
 - Edit and Delete Review Buttons
 
@@ -678,7 +670,7 @@ Editing a review left by a general user doesn't change who the review was left b
 
 Clicking on delete takes the user to the delete confirmation page to prevent the user from accidentally deleting their review. On this page they have the option to confirm deletion of the review or go back to the product details. When the Delete button is clicked the review it removed from the model and is no longer displayed on the product details page. The review count also decreases. When clicking cancel, the user is taken back to the product details of the product they were previously in. You can also see that the count remains the same and the review is still visable on the details page and in the model. 
 
-### 20. As a Shopper I want to save Items to my favourites so that I can purchase them later without having to search for them.
+### 19. As a Shopper I want to save Items to my favourites so that I can purchase them later without having to search for them.
 
 - Add products to favourites
 
@@ -695,3 +687,47 @@ This was tested by adding items to my favourites and testing the remove buttons 
 - Removing products from favourites if no longer available
 
 This was tested by deleting a product from the site to ensure it was removed from the user’s favourited items. When the product was deleted, the item was removed without any issues and no longer available from the ‘My Favourites’ page.
+
+
+# Validator Testing
+
+- The HTML templates were validated using [W3 Validator](https://validator.w3.org/nu/#textarea). No major errors were returned for the HTML segments.
+- The CSS style sheet was validated using [W3C Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and no errors were returned.
+- The JavaScript files were run through [JSHint](https://jshint.com/) and no errors were found apart from a few missing semi-colons which were added. Also, the project was run through whilst checking for any issues in the console. No errors were found.
+- The code was validated using [PEP8](http://pep8online.com/). No errors were returned.
+- The finished project was also run through [Wave](https://wave.webaim.org/) to check for issues with contrast styling and HTML structure.
+
+# Responsive Testing
+
+I also tested this project's responsiveness across multiple devices including:
+
+- iPhone X
+- iPhone 8
+- Samsung S21 FE
+- Samsung S10+
+- Samsung Galaxy Z Flip3
+- iPad Pro 9.7"
+- MacBook Pro 13"
+
+I also used Google developer tools to check responsiveness across multiple other devices and screen sizes. 
+
+# Bugs Found 
+
+I encountered the following issues whilst building this project:
+- The Footer wasn't sticking to the bottom on some of the pages. To fix this I added an 'h-100' Bootstrap class to the container divs or set the minimum height within media queries. 
+
+- The Success Message wasn't working when removing items from the cart. To fix this I needed to get the product ID to identify which Item was being deleted in the message
+
+- The Shopping bag was repeating the 'Continue Shopping' and 'Add to Bag' buttons after every item in the bag. To fix this I moved the {% endfor %} for the {% if bag_items %} to be before the buttons.
+
+- Incorrect Stripe public key in checkout view. I accidentally wrote the public key in the context in capitals. 
+
+- I was able to add products to categories that were not on the dropdown list. To fix this I had to remove the non-existing categories in the admin panel and remove/change to category of the products added to these categories.
+
+- Deploy not completing - message received: ERROR: Could not find a version that satisfies the requirement python-apt==2.0.0+ubuntu0.20.4.7 (from versions: 0.0.0, 0.7.8). To fix this I removed the un-required installs from requirements.txt file.
+
+- The Webhook for the live site was generating a 301 error. To fix this I had to add a / at the end of the URL that the webhook was set up to.
+
+- The delivery confirmation page image wasn't Loading on the deployed site. To fix this I changed the image source to the images [AWS](https://aws.amazon.com/?nc2=h_lg) URL to display the image.
+
+- Stripe was sending a Server 500 error in the Webhooks, this was an error on Stripes part which I could not control. I believe this is fixed now. All Webhooks are currently sending as expected. 
