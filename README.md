@@ -441,6 +441,13 @@ This was tested by subscribing with an email and checking the email list on Mail
 - A success message is displayed underneath the email box to confirm the subscription. I tested this by submitting a valid email that exists. A success message appeared underneath, thanking the user for subscribing.
 
 
+### 5.	As a Site Owner, I want to be able to remove reviews from the site without deleting them so that they can still be available if required.
+
+- Status Field in Admin Panel
+
+Within the Admin panel, the Superuser is able to remove a review from the site without deleting it by un-ticking the status checkbox within the review. This was tested by un-checking the status box on one of the submitted reviews. I then went to the product the review was for to check whether the review was still posted on the Product Details page. The review was removed without being deleted and the total count of review decreased.
+
+
 
 
 
