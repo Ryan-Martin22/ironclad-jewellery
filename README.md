@@ -94,3 +94,50 @@ To achieve the above user and business goals, this project will be created with 
 - A User Profile Page so that users can save delivery details for faster orders in future and to see their order history.
 
 - Custom 404 Error Page
+
+# Structure
+
+This project is structured with a homepage that greets the user with a clear navigation bar at the top of the page to search for the item required or to browse all products. There is the ability to sort items by price, alphabetically, and by category as well as the ability to search for a product by typing keywords into the search bar.
+
+The website is made of the following apps:
+1. Home
+2. Products
+3. Profile
+4. Bag
+5. Checkout
+6. Contact
+7. Favourites
+
+## Database Models 
+
+### Category
+
+The Category model is required so that the site owner can assign products to a Category. This model allows for filtering functionality so that shoppers can search for items wanted by item type, new arrivals, clearance, and deals.
+
+### Products
+The Products model is required to add products for sale to the site. The site owner only can add, edit, and delete products from here and all users can view the full product list on the site.
+
+### Order & Order Line Items
+The Order model holds the order details of an order placed by the shoppers. This is connected to the Order Line Items model which contains the products ordered by the shopper.
+
+### User Profile
+
+The User Profile contains delivery information for those who created an account and chose to store their delivery details for faster checkout.
+
+### Favourites
+
+The Favourites model is required for users to add products to their favourites so they can come back to purchases them later.
+
+### Contact
+
+The Contact model enables users to provide information in order for them to contact the store owner about a specific query. 
+
+### Review 
+
+The reviews database holds all of the reviews submitted by users with an account. Users can submit, edit and delete reviews posted by themselves whilst logged in to their accounts. This is accessible via the Product Details page for the products they have reviewed.
+
+## Wireframes
+
+All wireframes were created using [Balsamiq](https://balsamiq.com/).
+
+Ironclad Jewellery Wireframes for Mobile, Tablet and Desktop devices can be viewed in the wirefames folder within the assets folder. 
