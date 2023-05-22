@@ -141,3 +141,74 @@ The reviews database holds all of the reviews submitted by users with an account
 All wireframes were created using [Balsamiq](https://balsamiq.com/).
 
 Ironclad Jewellery Wireframes for Mobile, Tablet and Desktop devices can be viewed in the wirefames folder within the assets folder. 
+
+# Marketing Strategies
+
+The following questions were asked and answered when trying to decide on the best marketing strategy. 
+
+1.	Which online platforms would you find lots of your users?
+
+- Facebook
+- Instagram
+- Tiktok
+- pinterest
+- Twitter
+
+2.	Would your users use social media? If yes, which social media platforms do you think you would find them on?
+
+- Facebook
+- Instagram
+- Tiktok
+- Twitter
+
+3.	What do your users need? Could you meet that need with useful content? If yes, how could you best deliver that content to them?
+
+- Style Inspiration: 
+    - Facebook Posts of our jewellery styled and possible combinations with oufits for occasions
+    - TikTok Videos following current editing trends
+- Gift Inspiration
+    - Facebook/Instagram Posts of gift ideas and product combinations
+    - Emails with gift ideas, particularly around Fathers Day, Christmas and International Men's Day.
+
+4.	Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers?
+
+- Email deals for subscribers who sign up to the newsletter
+- Sale Emails and Facebook Posts/Stories
+
+5.	What are the goals of your business? Which marketing strategies would offer the best ways to meet those goals?
+
+- Make Sales
+- Monthy site viewing targets
+- Gather repeat customers
+- Target of account sign-ups
+
+
+6.	Would your business have a budget to spend on advertising? Or would it need to work with free or low-cost options to market itself?
+
+- Free/low-cost marketing as the budget would need to go towards aquiring more stock and potentially high end pieces.
+
+I also looked at the below business as they both also sell stylish jewellery for men, Instagram is the most popular site followed by Facebook. 
+
+### Craftd London: 
+FB Page 51,703 likes, Instagram 383k followers
+
+### Indigo Sands: 
+FB Page 65,036 likes, Instagram 379K followers
+
+### Facebook
+
+<img src="assets/readme_images/fb1.png">
+
+<img src="assets/readme_images/fb2.png">
+
+<img src="assets/readme_images/fb3.png">
+
+
+### Subscription
+
+Users are also able to subscribe to receive the Clay & Fire Jewellery Newsletter via the Mailchimp form found in the footer. Subscription email would contain Upcoming Sale information and current deals. 
+
+<img src="assets/readme_images/mailchimp.png">
+
+
+
