@@ -564,3 +564,50 @@ An order was placed without being logged into an account. It was tested by compa
         - Deals
         - Clearance 
         - All Specials
+
+### 11. As a shopper, I want to be able to be able to sort multiple categories and products simultaneously so that I can find the best priced product over a broader range of categories
+
+Testing the sort functionality was done within the all products tab as it contained the majority of products. The sort options tested were:
+
+- Price (Low to High)
+- Price (High to Low)
+
+These were tested by checking the first and last price of the items on the page to check they sorted correctly. 
+
+- Name (A to Z)
+- Name (Z to A)
+
+These were tested by checking the first and last Name of the items on the page were in alphabetical order. 
+
+- Category (A to Z)
+- Category (Z to A)
+
+These were tested by checking through the of list items on the page and checking the categories were in alphabetical order. 
+
+All sort options work as expected.
+
+### 12. As a shopper, I want to be able to be able to easily see what I’ve searched for and the number of results so that I can quickly see whether the product is available.
+
+This was tested by:
+
+- Searching via the search box
+- Searching through the categories 
+
+The quantity for the search is displayed at the top left of the page, along with the search term and the number displayed matched the number of searches on each page.
+
+### 13. As a shopper, I want to be able to be able to easily register for an account so that I can have a personal account and view my profile and purchase history.
+
+This was tested by registering a couple of user accounts and:
+
+- logging out and back in to ensure they worked
+- Confirming the account via email
+- Checking the Admin panel for confirmed email addresses
+- Attempting to create an account with an email address that already exists
+
+The above ensured the user accounts were generated. 
+
+To test profile information I added an address and attempted to checkout an item. This ensured that the address saved in the profile was auto-filled on the checkout page. To test this further I made an order, ensuring the save details to profile checkbox is ticked and checked the address saved to the user's profile. 
+
+To test the order history, I checked whether the orders that were placed to test the profile information had been saved to the profile, and the information contained in the order matched what was placed in the bag and checked out. All orders made were listed with a link to the Order Confirmation page.
+
+To test that accounts cannot be created with the same email address I attempted to create an account for an email that already exists. An error message occurred after I clicked submit, ensuring I was unable to create the duplicate account
