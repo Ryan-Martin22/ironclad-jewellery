@@ -509,3 +509,31 @@ The following scenarios were tested to ensure the checkout went through securely
 
 The Order total was also compared on the checkout page, the successful checkout page, on Stripe, and within the Order database to ensure all totals matched.
 
+### 6. As a shopper, I want to be able to be able to feel that my personal and payment details are safe and secure so that I can confidently carry out my purchase.
+
+- Address details can be saved if the user has an account and updated/removed if the user wishes. This was tested by adding and removing an address via the profile page. An address was also added and saved to the profile upon checkout to test that it saved within the User's Profile page.
+
+- The project uses Stripe to process payments, keeping the user's payment information safe and not stored within their user profile. 
+
+- Payment information isn't stored in any of the project's models or reflected in any confirmation emails.
+
+### 7. As a shopper, I want to be able to be able to view an order confirmation so that I can verify my order is correct.
+
+- Users with a profile have a list of orders made on their profile page. Clicking the order number takes the user to view the confirmation page that was displayed directly upon checkout. The confirmation contains the following details of the purchase:
+    - Order Number
+    - Order Date
+    - Product Name and Quantity
+    - Price per item
+    - Delivering to
+    - Phone Number
+    - Address
+    - Order Total
+    - Delivery Cost
+    - Grande Total
+
+- The above details contained within the order confirmation matched the items initially added to the shopping bag, the checkout form page Order Summary, and the order in the database.
+
+### 8. As a shopper, I want to be able to receive an email confirmation of my order so that I have proof of my order for my records.
+
+- Email confirmation was tested by placing an order to an email address that can be checked. An email confirmation matching the template set up in the checkout app was received with the correct order details within and a contact email for if there was an issue with the order.
+
