@@ -629,3 +629,33 @@ This was tested by registering for an account. To complete registration, the use
 Contained in the footer, the user can subscribe by entering their email and clicking submit. If there is an error with the email, an error message appears underneath the email box. If successful then there is a success message instead. 
 
 The subscription was tested by using a test email to subscribe and logging into Mailchimp and checking the contacts. Once confirmed the contact was there I scrolled across to see if they were subscribed. From here I also tested unsubscribing a user to ensure it is possible if a request came in. 
+
+### 17. As a shopper, I want to be able to be able to contact the site owner so that I can ask about my order or for further information.
+
+The contact form link is placed within the footer and takes the user to the contact page. The form was tested by ensuring:
+
+- the required fields must be completed before submission.
+- The form fields took the correct information:
+    - the email input took only emails
+- The message box could hold enough text for a message.
+- the form submitted the message to a working email for the site owner to respond.
+
+### 18. As a shopper, I want to be able to be able to review products purchased on the site so I can share my thoughts with other shoppers and the business.
+
+The review section was tested by:
+
+- Attempting to submit a review without being logged in
+
+This worked correctly as you must have an account to submit a review. Without an account the form isn't visable on the Product Details page, only a message asking the user to login if they want to review.
+
+- Logging into an account and submitting a review
+
+This worked as the review was linked to the product in the backend and was also displayed on the Product Details page.
+
+- Clicking submit without adding a review
+
+Both the rating and the review sections are required fields so the form cannot be submitted without them both being filled in. The rating is checked at 5 stars so if the user doesn't pick a star rating it will automatically submit with 5 stars. The user is able to edit their review if they wish to change this.
+
+- Deleting the Product removed the reviews from the model
+
+This was tested by adding a new product to the shop. I then added a review, followed by deleting the product. The review was deleted from the database along with the product. I checked this by signing into the admin panel and checking the list of reviews. The review added to the product what was deleted from the Review model as was the product from the Products model.
