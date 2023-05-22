@@ -211,4 +211,120 @@ Users are also able to subscribe to receive the Clay & Fire Jewellery Newsletter
 <img src="assets/readme_images/mailchimp.png">
 
 
+# Features
+
+## Homepage
+
+### Logo / Shop Name
+
+<img src="assets/readme_images/shop-name.png" width="50%">
+
+### Search Bar 
+
+<img src="assets/readme_images/search.png" width="50%">
+
+### My Account 
+
+<img src="assets/readme_images/my-account.png" width="50%">
+
+### Shopping Bag 
+
+<img src="assets/readme_images/shopping-bag.png" width="20%">
+
+### Bootstrap Toast
+
+<img src="assets/readme_images/success-toast.png" width="50%">
+
+<img src="assets/readme_images/alert-toast.png" width="50%">
+
+### Product Navigation
+
+<img src="assets/readme_images/navigation.png" width="100%">
+
+### Delivery Banner
+
+<img src="assets/readme_images/delivery-banner.png" width="100%">
+
+### Homepage Message
+
+<img src="assets/readme_images/homepage.png" width="750%">
+
+## My Account
+
+### Account Registration
+
+<img src="assets/readme_images/registration.png" width="50%">
+
+### Login
+
+<img src="assets/readme_images/login.png" width="50%">
+
+### My Profile
+
+- Delivery Information
+
+<img src="assets/readme_images/default-delivery.png" width="50%">
+
+- Order History
+
+<img src="assets/readme_images/order-history.png" width="50%">
+
+- Order Confirmation
+
+<img src="assets/readme_images/checkout-success.png" width="50%">
+
+
+### Logout
+
+<img src="assets/readme_images/logout.png" width="50%">
+
+## Products Page 
+
+<img src="assets/readme_images/products.png" width="75%">
+
+## Product Details 
+
+<img src="assets/readme_images/add-favourites.png" width="75%">
+
+## Product Favourited 
+
+<img src="assets/readme_images/added-favourites.png" width="50%">
+
+## Product Review
+
+Visable on the bottom of the Product Details Page
+
+Logged in as Superuser and with reviews:
+
+<img src="assets/readme_images/review-section-1.png" width="75%">
+
+Not logged in and without reviews:
+
+<img src="assets/readme_images/review-section-2.png" width="75%">
+
+## Edit Review Form
+
+<img src="assets/readme_images/edit-review.png" width="75%">
+
+## Delete Review Confirmation
+
+<img src="assets/readme_images/delete-review.png" width="50%">
+
+## Favourited Products (Wishlist)
+
+<img src="assets/readme_images/my-favourites.png" width="75%">
+
+## Shopping Bag
+
+<img src="assets/readme_images/shopping-bag.png" width="50%">
+
+## Checkout
+
+<img src="assets/readme_images/checkout.png" width="50%">
+
+## Checkout Success
+
+<img src="assets/readme_images/checkout-success.png" width="50%">
+
+
 
