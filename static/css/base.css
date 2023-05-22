@@ -251,6 +251,60 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/* the footer */
+footer {
+    width: 100%;
+    display: inline-block;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    border-top: 4px solid #243c6a
+}
+
+.img {
+    width: 100px;
+    height: 250px;
+}
+
+.newsletter {
+    font-size: 19px;
+    font-family: 'Lato', sans-serif;
+}
+
+.newsletter,
+.about,
+.footer-button,
+.privacy-policy {
+    color: #000;
+}
+
+.newsletter:hover,
+.about:hover,
+.privacy-policy:hover {
+    color: #000;
+}
+
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px;
+    width: 600px;
+
+}
+
+.social-networks i {
+    font-size: 160%;
+    padding: 5px;
+    color: #000;
+}
+
+.social-networks i:hover {
+    color: #000;
+
+}
+
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
