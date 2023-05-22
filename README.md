@@ -421,6 +421,26 @@ I also attempted to edit products whilst signed in as a generic user. The edit b
     - Update product saves the updated product information and returns the user to the Products Page. This is confirmed via the admin panel and the details on the Product Details page.
 
 
+### 3.	As a Site Owner, I want to be able to delete a product so that I can remove items that are no longer available.
+
+The following was tested by deleting a Product via the delete button on the Product Card:
+- Clicking delete took the user to a Delete Confirmation Page. 
+- Confirming delete removes the product from the product model and is no longer available to buy via the Products Page.
+- The user cannot view the product with the URL. Using the link for a product that no longer exists takes the user to a 404 error page.
+- A success message at the top right of the page confirms the product is successfully deleted.
+
+### 4.	As a Site Owner, I want to be able to send emails to customers with a subscription, notifying customers of any deals, sale and new arrivals.
+
+- Customers who sign up for emails are added to the business's Mailchimp contacts list where they can be unsubscribed. Users can contact the owner via the 'contact us' form in the footer to unsubscribe. 
+
+This was tested by subscribing with an email and checking the email list on Mailchimp to ensure it was submitted. I also check the unsubscribe functionality to ensure it was easy to remove an email from the email list.
+
+- Unsubscribed users can re-subscribe by submitting their email again. This was tested by unsubscribing an email and then re-subscribing. The re-subscribed email is back in the email list as subscribed.
+
+- An error message is displayed underneath the email box if there is an issue with the email provided. I attempted to subscribe with test@test.com, a message appeared underneath stating that I could not subscribe with this email.
+- A success message is displayed underneath the email box to confirm the subscription. I tested this by submitting a valid email that exists. A success message appeared underneath, thanking the user for subscribing.
+
+
 
 
 
