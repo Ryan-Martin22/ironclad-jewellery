@@ -750,3 +750,204 @@ Of the above, the top combination of searches  I found were:
 -	Men's silver Jewellery
 -	Men's jewellery Ireland
 
+### Product Images
+- 'noimage.png' taken from Code Institutes Boutique Ado Follow Along Project
+- Product Images were obtained from [Pexels](https://www.pexels.com/)
+- landing page image was obtained from [Unsplash](https://www.unsplash.com)
+
+
+# Deployment 
+ 
+
+This project was deployed using Heroku. 
+
+See the following steps to deploy below:
+
+1. Log into Heroku and Create a New App.
+
+2. Give the App a name, it must be unique, and select a region closest to you. 
+
+3. Click on 'Create App'. This will take you to a page where you can deploy your project. 
+
+4. Next, click on the 'Resources' tab and search for 'Heroku Postgres' in the Add-ons section to add the Heroku Postgres database to the project. 
+
+5. Click on the 'Settings' tab at the top of the page. The following steps must be completed before deployment.
+
+6. Within the settings.py file you need to import os and import dj_database_url at the top. Then, in the command line install dj_database_url and psycopg2 so that we can use Postgres. Freeze these installs into the requirements.txt file.
+
+7. Scroll down to Config Vars (also known as Environment Variables) and click 'Reveal Config Vars'. Here the database URL is stored to run my app on Heroku. 
+
+I used an if statement in settings.py (see below) so that when our app is running in Heroku, we connect to Postgres but in our local environment, we connect to sequel light:
+
+    development = os.environ.get('DEVELOPMENT', False)
+
+    if development:
+
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': BASE_DIR / 'db.sqlite3',
+                }
+            }
+
+        else:
+
+            DATABASES = {
+                'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+            }
+
+Development is set in gitpod's environment variables as True.
+
+8. Next I ran the migrations again to set up my Postgres Database by running **Python 3 manage.py migrate** within the command line and then create a Superuser using **python3 manage.py create superuser**.
+
+9. Following setting up the database I generated a new Secret Key, to replace the insecure key that was in settings.py and added: **os.environ.get('SECRET_KEY')**. I then added the newly generated key to the Config Vars on Heroku. 
+
+10. We must then install Gunicorn, which will act as our webserver and freeze that into our requirements file.
+
+11. Next, I created a Procfile to tell Heroku to create a web dyno that will run Gunicorn and serve our Django app.
+
+Within this file add the following:
+
+    web: gunicorn ironclad.wsgi
+
+Web tells Heroku to allow web traffic, whilst Gunicorn is the server installed earlier, a web services gateway interface server (wsgi). This is a standard that allows Python services to integrate with web servers.
+
+12. I then told Heroku temporarily disable collectstatic by using the Heroku config set, disable collectstatic = 1. I added this via Heroku's Config Vars but this can also be added via the command line. This was to prevent Heroku from attempting to deploy the static files, causing an error, until Amazon Web Services was set up. 
+
+13. Then add the hostname of our Heroku app to 'Allowed Hosts' in settings.py as well as localhost so that GitPod will still work too.
+
+14. I then committed and pushed these changes into my GitHub repository so that I could start my first deployment. Once complete, log into Heroku using the following command in the terminal, **heroku login -i**,  and enter your login details.
+
+15. Once logged in, add a remote to your local repository with the Heroku git:remote command and your Heroku app’s name.
+
+16. Finally, deploy using the following command: **git push heroku main**. Once deployed you can open the app from the command line to ensure it was successfully deployed.
+
+17. Once we can confirm the app deployed successfully, we need to set up Amazon Web Services as this will be where my media and static files are stored. To do this I first created an account with Amazon Web Services. Then, I searched for the service, S3, using the search bar at the top of the page. 
+
+18. Click into it and then click the orange 'Create a Bucket' button. I named this bucked to match my clay-and-fire Heroku app name to keep things simple. Then, I selected my region and changed the 'Object Ownership' setting to **ACLs enabled**. Then, I unchecked block all public access, acknowledged that the bucket will be public, and clicked on the 'Create Bucket' button.
+
+19. Next, on the properties tab, I scrolled to the bottom and turned on static website hosting.
+This gave me a new endpoint that I can use to access it from the internet. For the index and error document, I filled in some default values and then clicked Save.
+
+20. Now on the permissions tab I pasted in the following coors configuration:
+
+    [
+        
+        {
+            "AllowedHeaders": [
+            "Authorization"
+            ],
+
+            "AllowedMethods": [
+            "GET"
+            ],
+
+            "AllowedOrigins": [
+            "*"
+            ],
+
+            "ExposeHeaders": []
+        }
+        
+    ]
+
+which is going to set up the required access between our Heroku app and this s3 bucket.
+
+21. Next I'll go to the bucket policy tab a select, policy generator so we can create a security policy for this bucket. The policy type is going to be s3 bucket policy and then allow all principals by using a '*' and the action will be, get object. Next, I copied the ARN which stands for Amazon resource Name from the other tab and paste it into the ARN box at the bottom. I then clicked 'Add statement' and then 'Generate Policy'.
+
+22. I then copied this policy into the bucket policy editor. I then added '/*' at the end of the resource key to allow access to all resources in this bucket and then saved it.
+
+23. Finally, to complete configuration, I went to the 'access control list' tab and checked edit and enable List for Everyone (public access), and accepted the warning box.
+
+24. Next I created a group and a user to access the bucket by searching for the service IAM (Identify and Access Management). I clicked on 'User Groups' and then 'Create User Group' giving it the name 'manage-clay-and-fire'. 
+
+25. I then created the Policy used to access our bucket by clicking 'Policies' and then 'Create Policy'. I clicked onto the JSON tab and then selected import managed policy to import one that AWS has pre-built for full access to s3.
+
+26. I searched for s3 and then import the s3 full access policy. I then got the bucket ARN from the bucket policy page in s3 and pasted that into the 'Resource' section on the JSON tab.
+
+I then clicked the 'Next' buttons until I reached 'Review Policy'. I gave it a name and a description and then clicked 'Create Policy'. This took me back to the policies page.
+
+27. Next I attached the policy to the Group I created by returning to the Create User Group page and refreshing the Policies box. I then was able to attach the new policy created by selecting it and finally clicking 'Create Group'.
+
+28. Finally I created a user to put in the group by going to the User's page and clicking 'Add User'. I created a user , gave them Programmatic Access, and clicked 'Create User'. 
+
+29. I then downloaded the CSV file which contained this User's Access Key and Secret Access Key which I used to authenticate them from my Django app. It is important to download this file as you cannot be re-downloaded and contains the new user's credentials which I next add to the Config Vars on Heroku.
+
+30. Next, I connected Django to the new S3 bucket. To do this I installed two new packages:
+- boto3
+- django-storages 
+
+31. I then pip3 freeze these to the requirements.txt file to ensure they're installed on the next Heroku Deploy and added **storages** to our installed apps in settings.py. 
+
+32. To connect Django to S3 (only on Heroku) I then added the following in if statement settings.py:
+
+        if 'USE_AWS' in os.environ:
+            # Bucket Config
+            AWS_STORAGE_BUCKET_NAME = 'ironclad-jewellery'
+            AWS_S3_REGION_NAME = 'eu-west-2'
+            AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+            AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+            AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+            # Static and media files
+            STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+            STATICFILES_LOCATION = 'static'
+            DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+            MEDIAFILES_LOCATION = 'media'
+
+            # Override static and media URLs in production
+            STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+            MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+
+33. I then added the following to our Config Vars on Heroku:
+- USE_AWS = True
+- AWS_ACCESS_KEY_ID, taken from the new user credentials
+- AWS_SECRET_ACCESS_KEY, taken from the new user credentials
+
+and removed:
+- Remove staticcollect=1 from congifvars within Heroku 
+
+I also set DEBUG to 'DEVELOPMENT' in os.environ as for security it cannot be set to True on the deployed version. 
+
+34. The next step is to tell Django that in production we want to use s3 to store our static files whenever someone runs collectstatic and that we want any uploaded product images to go there also. To do that I created a file called custom_storages.py.
+
+35. Within this file I imported both our settings from django.conf and the s3boto3 storage class from Django Storages. Then I created custom classes for static storage and media storage which inherited the imported class from Django Storages to give it all its functionality. Then I set the class to store static and media files in the location specified in the USE_AWS if statement within settings.py.
+
+36. Finally, to complete the deployment of the AWS setup, I committed the changes and pushed them to GitHub. In the command line I then typed the following command: **git push heroku main**. If you need to login to Heroku again complete steps 14 - 16 to re-deploy. Once Heroku is allowing users to connect to their GitHub accounts you can set up automatic deploys which will remove the need to repeat these steps.
+# Credit
+## Content 
+
+I used the Code Institutes Boutique Ado Follow Along project to help with building this project along with the following websites:
+
+- [Mini Web Tool](https://miniwebtool.com/django-secret-key-generator/) to generate a new Django Secret Key. 
+
+- [GDPR Privacy Policy Generator](https://www.privacypolicygenerator.info/) was used to generate the Privacy Policy that was added to the footer.
+
+- I used the following YouTube Tutorials to help with creating the Error404 page:
+
+    - [Custom 404 Error Page. Python Django Web Framework Course. #16](https://www.youtube.com/watch?v=3SKjPppM_DU)
+    - [Python Django 3 0 7 Create Show Custom 404 Error Page](https://www.youtube.com/watch?v=ZhwkddfqUTY)
+
+<br>
+
+- [XML Sitemap Generator](https://www.xml-sitemaps.com/) was used this to generate the sitemap for my project.
+
+- The following videos were used to help create the review functionality:
+    - [Rathan Kumar - Review and Rating System in Django Python Part 1](https://www.youtube.com/watch?v=3KCBN7WJXMY)
+    - [Rathan Kumar - Review and Rating System in Django Python Part 2](https://www.youtube.com/watch?v=Zkmu93lMLPs)
+    - [Rathan Kumar - Review and Rating System in Django Python Part 3](https://www.youtube.com/watch?v=gDtsAWMA3Jo)
+    - [Rathan Kumar - Review and Rating System in Django Python Part 4](https://www.youtube.com/watch?v=eIN1nZCt7Ww)
+
+- [Stack Overflow](https://stackoverflow.com/questions/16244821/how-to-stop-sticky-footer-from-covering-content) was used to fix the footer covering the review form.
+
+- [Stack Overflow](https://stackoverflow.com/a/666407) was used to help with the cancel button for the confirm delete review template.
+
+
+- The following helped with putting together the favourites functionality:
+    - [Stackoverflow](https://stackoverflow.com/questions/64720982/modeling-favorites-in-django-from-two-different-models)
+    - [Very Academy Python Django Ecommerce Customer Wish List](https://github.com/veryacademy/django-ecommerce-project/blob/main/Part-07%20Wish%20List/account/views.py)
+    -
+
+    # Acknowledgments
+Thank you to all who encouraged and supported me as I created my first full-stack E-Commerce website. Thank you to the Tutors at Code Institute for always helping to figure out issues I encountered that I was unable to solve myself. I'd especially like to thank my mentor at Code Institute, Antonio, for his guidance, patience, encouragement, and constant support.
