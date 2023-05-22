@@ -491,3 +491,21 @@ The following scenarios were tested by completing the order and checking what wa
 
 All of the above actions are reflected correctly in the Order database along with the correct total delivery and grand total prices.
 
+### 5. As a shopper, I want to be able to be able to enter payment information so that I can check out quickly and hassle free.
+
+The checkout function was tested using Stripe's test card number. 
+
+The following scenarios were tested to ensure the checkout went through securely:
+
+- Submitting an order, completing only the required fields on the checkout form. The order went through both on Stripe and was stored in the Database with a success Webhook message.
+
+- Attempting to submit an order with incorrect card details. An error message appears underneath the card details form confirming the details are incorrect.
+
+- Attempting to submit an order with an expired card. An error message appears underneath the card details form confirming the card has expired.
+
+- Submitting an order, completing only the required fields on the checkout form, with the form.submit() within the stripe_elements.js file commented out to simulate a user closing the page before the checkout success confirmation page has loaded. The order went through both on Stripe and stored in the Database with a success Webhook message.
+
+- Attempting to submit an order with an incomplete order form. All empty required fields alert the user they must be filled to be completed and the form isn't submitted. 
+
+The Order total was also compared on the checkout page, the successful checkout page, on Stripe, and within the Order database to ensure all totals matched.
+
