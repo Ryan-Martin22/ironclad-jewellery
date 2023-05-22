@@ -43,3 +43,54 @@ And the Owner will need a website that:
 - Allows customers to get in contact if required through a contact form.
 
 - Allows user to share feedback through reviews on products in order to improve products/service.
+
+
+# User Stories
+
+Please find my Projects Board with my user stories [here](https://github.com/users/Ryan-Martin22/projects/6). Below is a detailed list of User Stories per User Type.
+## Superuser / Admin
+1.	As a Site Owner I want to be able to add a product so that I can add more items to my store to increase revenue.
+2.	As a Site Owner I want to be able to Edit/Update a product so that I can change the price, description, and other product criteria if any changes were to occur.
+3.	As a Site Owner I want to be able to delete a product so that I can remove items that are no longer available.
+4.	As a Site Owner I want to be able to send emails to customers with a subscription, notifying customers of any deals, sales, and new arrivals.
+5.	As a Site Owner, I want to be able to remove reviews from a product if the review is derogatory to the nature of the site.
+6. As a Site Owner I want customers to be able to contact me about any issues by filling out a contact form.  
+
+## Shopper
+1.	As a Shopper I want to be able to view a list of items so that I can add them to my basket to purchase.
+2.	As a shopper I want to be able to click into an item so that I can view a product description and add it to the basket.
+3.	As a shopper I want to be able to add items to my basket so that I can keep track of what I am spending.
+4.	As a shopper I want to be able to adjust the quantity of products in my basket so that I can make changes to my purchases before checkout.
+5.	As a shopper I want to be able to enter payment information so that I can check out and purchase my product with ease.
+6.	As a shopper I want to be able to feel that my personal and payment details are safe and secure so that I can confidently carry out my purchase.
+7.	As a shopper I want to be able to view an order confirmation so that I can verify my order is correct.
+8.	As a shopper I want to be able to receive an email confirmation of my order so that I have proof of my order for my records in case of any delivery delay.
+9.	As a shopper I want to be able to order without creating an account so that I can make one-off orders.
+10.	As a shopper I want to be able to sort a specific category of products so that I can find the exact style/type of product that suits me.
+11.	As a shopper I want to be able to sort multiple categories and products simultaneously so that I can find the best-priced product over a broader range of categories
+12.	As a shopper I want to be able to easily see what I’ve searched for and the number of results so that I can quickly see whether the product is available.
+13.	As a shopper I want to be able to easily register for an account so that I can have a personal account and view my profile and purchase history.
+14.	As a shopper I want to be able to receive a registration confirmation email so that I can confirm registration.
+16.	As a shopper I want to be able to sign up for emails so that I can be notified of new releases, deals, and upcoming sales.
+17. As a shopper, I want to be able to be able to contact the site owner so that I can ask about my order or for further information not on the site or social media.
+18. As a shopper, I want to be able to be able to review products purchased on the site so I can share my thoughts with other shoppers and the business.
+19. As a shopper, I want to be able to be able to edit and remove my reviews of products purchased so I can share or remove my reviews if my opinions change.
+20. As a shopper I would like to save items so that I can return to them to purchase later.
+
+# Scope
+
+To achieve the above user and business goals, this project will be created with the following features:
+
+- Site Navigation containing a Search Bar, My Account Links, Shopping Bag links, Contact Us form and Product Categories sections.
+
+- A Landing Page that clearly demonstrates what the site is for.
+
+- A Products Page that lists the Products contained within the category/search carried out.
+
+- Products Cards that gives the user an image of the product along with name, price, and ability to click into it for more details.
+
+- Registration/login functionality using Django AllAuth so that users can create and manage their account.
+
+- A User Profile Page so that users can save delivery details for faster orders in future and to see their order history.
+
+- Custom 404 Error Page
