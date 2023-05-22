@@ -356,6 +356,35 @@ The following features can be implemented to enhance the project:
 - Implementation of a monthly discount coupon for subscribed shoppers.
 - Returns Functionality
 
+# Technologies Used
+## Languages Used
+
+[html](https://en.wikipedia.org/wiki/HTML)
+
+[CSS](https://en.wikipedia.org/wiki/CSS)
+
+[Python](https://www.python.org/)
+
+[JavaScript](https://www.javascript.com/)
+
+## Frameworks, Libraries, and Programmes Used 
+
+[GitHub](https://github.com/) - Holds the repository of my project, GitHub connects to GitPod and Heroku.
+
+[GitPod](https://gitpod.io/workspaces) – Connected to GitHub, GitPod hosted the coding space, allowing the project to be built and then committed to the GitHub repository. 
+
+[Heroku](https://www.heroku.com/) - Connected to the GitHub repository, Heroku is a cloud application platform used to deploy this project so the backend language can be utilised/tested. 
+
+[Django](https://www.djangoproject.com/) - This framework was used to build the foundations of this project, reducing time spent getting the project setup and preventing re-writing existing code.
+
+[Bootstrap](https://getbootstrap.com/) - Used to quickly add design and responsiveness to my website, Bootstrap focuses on mobile first design meaning this website is responsive across multiple devices and screen sizes.
+
+[Font Awesome](https://fontawesome.com/) - Used for all of the icons throughout the site.
+
+[Canva](https://www.canva.com/) - Used to create the favicon for the project.
+
+[Image Compressor](https://imagecompressor.com/) - Used to compress the website and product images.
+
 
 
 
