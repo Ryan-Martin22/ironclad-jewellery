@@ -731,3 +731,22 @@ I encountered the following issues whilst building this project:
 - The delivery confirmation page image wasn't Loading on the deployed site. To fix this I changed the image source to the images [AWS](https://aws.amazon.com/?nc2=h_lg) URL to display the image.
 
 - Stripe was sending a Server 500 error in the Webhooks, this was an error on Stripes part which I could not control. I believe this is fixed now. All Webhooks are currently sending as expected. 
+
+# Search Engine Optimisation (SEO)
+To find the relevant keywords for my project I made the following searches on [Google](www.google.co.uk) and [Word Tracker](www.wordtracker.com)  along with a few combinations:
+
+-	Men's Jewellery
+-	Steel Jewellery
+-	Gold mens Jewellery
+-   Silver men's jewellery
+-	Masculine jewellery
+-	Men's jewellery gifts
+-	Gift ideas for men
+
+Of the above, the top combination of searches  I found were:
+
+-	Men's Gold Jewellery
+-	Men's Jewellery Gifts 
+-	Men's silver Jewellery
+-	Men's jewellery Ireland
+
