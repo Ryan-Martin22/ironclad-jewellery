@@ -146,7 +146,7 @@ The Entity-Relationship Diagram below shows how the database models relate to ea
 
 All wireframes were created using [Balsamiq](https://balsamiq.com/).
 
-Ironclad Jewellery Wireframes for Mobile and Desktop devices can be viewed in the wirefames folder within the assets folder. 
+Ironclad Jewellery Wireframes for Mobile and Desktop devices can be viewed in the wirefames folder within the assets folder [here](assets/documents/wireframes.pdf).
 
 # Marketing Strategies
 
