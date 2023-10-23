@@ -136,11 +136,15 @@ The Contact model enables users to provide information in order for them to cont
 
 The reviews database holds all of the reviews submitted by users with an account. Users can submit, edit and delete reviews posted by themselves whilst logged in to their accounts. This is accessible via the Product Details page for the products they have reviewed.
 
+## ERD Diagram 
+
+<img src="assets/readme_images/ERD.png">
+
 ## Wireframes
 
 All wireframes were created using [Balsamiq](https://balsamiq.com/).
 
-Ironclad Jewellery Wireframes for Mobile, Tablet and Desktop devices can be viewed in the wirefames folder within the assets folder. 
+Ironclad Jewellery Wireframes for Mobile and Desktop devices can be viewed in the wirefames folder within the assets folder. 
 
 # Marketing Strategies
 
