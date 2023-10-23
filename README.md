@@ -138,6 +138,8 @@ The reviews database holds all of the reviews submitted by users with an account
 
 ## ERD Diagram 
 
+The Entity-Relationship Diagram below shows how the database models relate to each other:
+
 <img src="assets/readme_images/ERD.png">
 
 ## Wireframes
