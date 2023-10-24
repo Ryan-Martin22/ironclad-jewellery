@@ -192,7 +192,7 @@ def edit_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
     if review.user.id is not request.user.id: 
         messages.error(request, "You are not authorised to delete this review")
-        return redirect(reverse_lazy('product_detail', args=[product.id]))
+        return redirect(reverse('home'))
     product = review.product
 
     if request.method == 'POST':
@@ -228,7 +228,7 @@ def delete_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
     if review.user.id is not request.user.id: 
         messages.error(request, "You are not authorised to delete this review")
-        return redirect(reverse_lazy('product_detail', args=[product.id]))
+        return redirect(reverse('home'))
     product = review.product
 
     if request.method == 'POST':
