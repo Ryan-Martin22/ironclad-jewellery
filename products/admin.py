@@ -12,15 +12,15 @@ class ProductAdmin(admin.ModelAdmin):
     )
 
     ordering = ('sku',)
-    
+
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
-    
-    
+
+
 class ReviewAdmin(admin.ModelAdmin):
     """Admin Panel display for Product Model"""
     list_display = (
